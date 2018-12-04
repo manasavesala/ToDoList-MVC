@@ -11,3 +11,18 @@
 /Users/Guest/Desktop/ToDoList.Solution/ToDoList.Tests/bin/Debug/netcoreapp1.1/ToDoList.pdb
 /Users/Guest/Desktop/ToDoList.Solution/ToDoList.Tests/obj/Debug/netcoreapp1.1/ToDoList.Tests.dll
 /Users/Guest/Desktop/ToDoList.Solution/ToDoList.Tests/obj/Debug/netcoreapp1.1/ToDoList.Tests.pdb
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\obj\Debug\netcoreapp1.1\ToDoList.Tests.dll
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\obj\Debug\netcoreapp1.1\ToDoList.Tests.pdb
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\obj\Debug\netcoreapp1.1\ToDoList.Tests.csproj.CoreCompileInputs.cache
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\obj\Debug\netcoreapp1.1\ToDoList.Tests.AssemblyInfoInputs.cache
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\obj\Debug\netcoreapp1.1\ToDoList.Tests.AssemblyInfo.cs
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\bin\Debug\netcoreapp1.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\bin\Debug\netcoreapp1.1\ToDoList.Tests.deps.json
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\bin\Debug\netcoreapp1.1\ToDoList.Tests.runtimeconfig.json
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\bin\Debug\netcoreapp1.1\ToDoList.Tests.runtimeconfig.dev.json
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\bin\Debug\netcoreapp1.1\ToDoList.Tests.dll
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\bin\Debug\netcoreapp1.1\ToDoList.Tests.pdb
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\bin\Debug\netcoreapp1.1\ToDoList.dll
+C:\Users\Murali Medisetty\Desktop\ToDoList-MVC\ToDoList.Tests\bin\Debug\netcoreapp1.1\ToDoList.pdb
