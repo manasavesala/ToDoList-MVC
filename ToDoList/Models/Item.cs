@@ -88,7 +88,7 @@ namespace ToDoList.Models
       return _id;
     }
 
-    public static Item Find(int searchId)
+    public static Item Find(int id)
     {
       MySqlConnection conn = DB.Connection();
       conn.Open();
@@ -123,7 +123,7 @@ namespace ToDoList.Models
       cmd.CommandText = @"INSERT INTO items (description) VALUES (@ItemDescription);";
       MySqlParameter description = new MySqlParameter();
       description.ParameterName = "@ItemDescription";
-      description.Value = this._description;
+      description.Value = _description;
       cmd.Parameters.Add(description);    
       cmd.ExecuteNonQuery();    // This line is new!
 
