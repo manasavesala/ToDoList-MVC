@@ -1,0 +1,19 @@
+<h3>Here are all the items in this category:</h3>
+@if (@Model["items"].Count == 0)
+{
+  <h3>No Items have been added into category yet!</h3>
+}
+
+<ol>
+@foreach (var item in @Model["items"])
+{
+  <li><a href='/categories/@Model["category"].GetId()/items/@item.GetId()'>@item.GetDescription()</a>
+  <p><a href="/categories/@Model["category"].GetId()/items/@item.GetId()/delete" >Delete This Item</a></p>
+  </li>
+}
+</ol>
+
+<p><a href='/categories/@Model["category"].GetId()/items/new'>Add a new item</a></p>
+
+<p><a href='/categories'>Return to category list</a></p>
+<p><a href='/'>Return to Main Page</a></p>
