@@ -14,12 +14,12 @@ namespace ToDoList.Controllers
      return View(category);
     }
     
-    [HttpGet("/categories/{categoryId}/items/")]
-    public ActionResult Index(int categoryId)
-    {
-      List<Item> allCategoryItems = Item.GetAllCategoryItems(categoryId);
-      return View(allCategoryItems);
-    }
+    // [HttpGet("/categories/{categoryId}/items/")]
+    // public ActionResult Index(int categoryId)
+    // {
+    //   List<Item> allCategoryItems = Item.GetAllCategoryItems(categoryId);
+    //   return View(allCategoryItems);
+    // }
 
     [HttpGet("/categories/{categoryId}/items/{itemId}")]
     public ActionResult Show(int categoryId, int itemId)

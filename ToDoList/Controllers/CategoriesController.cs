@@ -42,25 +42,25 @@ namespace ToDoList.Controllers
       return View(model);
     }
 
-    [HttpGet("/categories/{id}/delete")]
-     public ActionResult Delete(int id)
-    {
-      Dictionary<string, object> model = new Dictionary<string, object>();
-      Category category = Category.Find(id);
-      List<Item> categoryItems = category.GetItems();
+    // [HttpGet("/categories/{id}/delete")]
+    //  public ActionResult Delete(int id)
+    // {
+    //   Dictionary<string, object> model = new Dictionary<string, object>();
+    //   Category category = Category.Find(id);
+    //   List<Item> categoryItems = category.GetItems();
       
-      foreach(Item item in categoryItems)
-      {
-        Item.DeleteItem(item.GetId());
-      }
+    //   foreach(Item item in categoryItems)
+    //   {
+    //     Item.DeleteItem(item.GetId());
+    //   }
 
-      Category.DeleteCategory(id);
+    //   Category.DeleteCategory(id);
      
-      model.Add("category", category);
-      model.Add("items", categoryItems);
-      return View("Delete", model);
+    //   model.Add("category", category);
+    //   model.Add("items", categoryItems);
+    //   return View("Delete", model);
    
-    }
+    // }
     
     
     //This one creates new Items within a given Category, not new Categories:
@@ -77,19 +77,19 @@ namespace ToDoList.Controllers
       return View("Show", model);
     }
 
-   [HttpGet("/categories/{categoryId}/items/{itemId}/delete")]
-    public ActionResult Delete(int categoryId, int itemId)
-    {
-      Item item = Item.Find(itemId);
-      Item.DeleteItem(item.GetId());
-      Dictionary<string, object> model = new Dictionary<string, object>();
-      Category category = Category.Find(categoryId);
-      List<Item> categoryItems = category.GetItems();
-      model.Add("category", category);
-      model.Add("items", categoryItems);
-      return View("Show", model);
+   // [HttpGet("/categories/{categoryId}/items/{itemId}/delete")]
+   //  public ActionResult Delete(int categoryId, int itemId)
+   //  {
+   //    Item item = Item.Find(itemId);
+   //    Item.DeleteItem(item.GetId());
+   //    Dictionary<string, object> model = new Dictionary<string, object>();
+   //    Category category = Category.Find(categoryId);
+   //    List<Item> categoryItems = category.GetItems();
+   //    model.Add("category", category);
+   //    model.Add("items", categoryItems);
+   //    return View("Show", model);
    
-    }
+   //  }
 
 
   }
