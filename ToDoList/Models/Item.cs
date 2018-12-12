@@ -191,37 +191,19 @@ namespace ToDoList.Models
       MySqlConnection conn = DB.Connection();
       conn.Open();
       var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"SELECT category_id FROM categories_items WHERE item_id = @itemId;";
+      cmd.CommandText = @"SELECT categories. * FROM items Join categories_items ON (items.id = categories_items.item_id) Join categories ON (categories_items.category_id = category_id) WHERE items.id = @itemId;";
       MySqlParameter itemIdParameter = new MySqlParameter();
       itemIdParameter.ParameterName = "@itemId";
       itemIdParameter.Value = _id;
       cmd.Parameters.Add(itemIdParameter);
-      var rdr = cmd.ExecuteReader() as MySqlDataReader;
-      List<int> categoryIds = new List<int> {};
+      MySqlDataReader rdr = cmd.ExecuteReader() as MySqlDataReader;
+      List<Category> categories = new List<Category> {};
       while(rdr.Read())
       {
-        int categoryId = rdr.GetInt32(0);
-        categoryIds.Add(categoryId);
-      }
-      rdr.Dispose();
-      List<Category> categories = new List<Category> {};
-      foreach (int categoryId in categoryIds)
-      {
-        var categoryQuery = conn.CreateCommand() as MySqlCommand;
-        categoryQuery.CommandText = @"SELECT * FROM categories WHERE id = @CategoryId;";
-        MySqlParameter categoryIdParameter = new MySqlParameter();
-        categoryIdParameter.ParameterName = "@CategoryId";
-        categoryIdParameter.Value = categoryId;
-        categoryQuery.Parameters.Add(categoryIdParameter);
-        var categoryQueryRdr = categoryQuery.ExecuteReader() as MySqlDataReader;
-        while(categoryQueryRdr.Read())
-        {
-          int thisCategoryId = categoryQueryRdr.GetInt32(0);
-          string categoryName = categoryQueryRdr.GetString(1);
-          Category foundCategory = new Category(categoryName, thisCategoryId);
-          categories.Add(foundCategory);
-        }
-        categoryQueryRdr.Dispose();
+        int thisCategoryId = rdr.GetInt32(0);
+        string categoryName = rdr.GetString(1);
+        Category foundCategory = new Category(categoryName, thisCategoryId);
+        categories.Add(foundCategory);
       }
       conn.Close();
       if (conn != null)
